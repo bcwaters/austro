@@ -1,0 +1,19 @@
+{
+  "name": "austro",
+  "version": "1.0.0",
+  "description": "auction website",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bcwaters/austro.git"
+  },
+  "author": "Brent Waters",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bcwaters/austro/issues"
+  },
+  "homepage": "https://github.com/bcwaters/austro#readme"
+}
