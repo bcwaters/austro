@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/bcwaters/austro/issues"
   },
-  "homepage": "https://github.com/bcwaters/austro#readme"
+  "homepage": "https://github.com/bcwaters/austro#readme",
+  "dependencies": {
+    "express": "^4.16.2"
+  }
 }
