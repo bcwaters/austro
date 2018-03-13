@@ -2,13 +2,12 @@
 const app = express()
 server = require('http').createServer(app)
 */
-var path = require('path')
 var React = require('react')
 var ReactDOM = require('react-dom')
 var App =require('./components/App.js')
 
-ReactDOM.render(
-		<div>thing<App /></div>,
+React.render(
+		<App />,
 		document.getElementById('app')
 	)
 
