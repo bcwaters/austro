@@ -1,34 +1,16 @@
 {
   "name": "austro",
-  "version": "1.0.0",
-  "description": "auction website built with react",
-  "main": "index.js",
-  "scripts": {
-  "dev": "webpack-dev-server --mode development",
-    "prod": "webpack --mode production",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/bcwaters/austro.git"
-  },
-  "author": "Brent Waters",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/bcwaters/austro/issues"
-  },
-  "homepage": "https://github.com/bcwaters/austro#readme",
-  "devDependencies": {
-    "babel-core": "^6.26.0",
-    "babel-loader": "^7.1.4",
-    "babel-preset-react": "^6.24.1",
-    "babel-preset-stage-0": "^6.24.1",
-    "webpack": "^4.1.1",
-    "webpack-cli": "^2.0.11",
-    "webpack-dev-server": "^3.1.1"
-  },
+  "version": "0.1.0",
+  "private": true,
   "dependencies": {
     "react": "^16.2.0",
-    "react-dom": "^16.2.0"
+    "react-dom": "^16.2.0",
+    "react-scripts": "1.1.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
   }
 }
