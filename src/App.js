@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import logo from './logo.png';
 import './App.css';
+import 'bootstrap/less/bootstrap.less'
+import MyNavbar from './components/MyNavbar.js';
 
 class App extends Component {
   render() {
@@ -13,7 +15,10 @@ class App extends Component {
         <p className="App-intro">
           AstroAuction is coming
         </p>
+        <MyNavbar />
+
       </div>
+    
     );
   }
 }
