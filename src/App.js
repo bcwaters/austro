@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import logo from './logo.png';
 import './App.css';
-import 'bootstrap/dist/css/bootstrap.css';
+import './bootstrap.css';
 import NavComp from './components/NavComp.js';
 
 class App extends Component {
