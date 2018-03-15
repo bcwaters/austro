@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import logo from './logo.png';
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.css';
+import NavComp from './components/NavComp.js';
 
 class App extends Component {
   render() {
@@ -8,12 +10,13 @@ class App extends Component {
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">AustroAuction</h1>
+          <div className="App-navbar"> <NavComp /></div>
         </header>
         <p className="App-intro">
           AstroAuction is coming
         </p>
       </div>
+    
     );
   }
 }
