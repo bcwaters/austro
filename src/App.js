@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import logo from './logo.png';
 import './App.css';
-import './bootstrap.css';
+import 'bootstrap/dist/css/bootstrap.css';
 import NavComp from './components/NavComp.js';
 import AuctionItem from './components/AuctionItemComp.js'
 
-class App extends Component {
+export default class App extends Component {
   render() {
     return (
       <div className="App">
@@ -24,4 +24,4 @@ class App extends Component {
   }
 }
 
-export default App;
+ 
