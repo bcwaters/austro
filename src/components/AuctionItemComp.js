@@ -4,7 +4,7 @@ export default class AuctionItemComp extends React.Component {
 	constructor(props){
 		super(props);
 		this.state ={
-			date: new Date()
+			date: new Date(),		
 		};
 	}
 
@@ -26,9 +26,12 @@ export default class AuctionItemComp extends React.Component {
 
 	render()
 	{
-		return <h1>
-			<div>Item:{this.props.name}</div>
-			<div>AuctionEndsAt:{this.state.date.toLocaleTimeString()}</div>
-		</h1>;
+		return <div class="AuctionItem">
+			<div>Item: <a href="/">{this.props.name}</a></div>
+			<div><img class="AuctionImg" src={this.props.imgPath} alt="paint"/></div>
+			<div>Auction ends at: {this.state.date.toLocaleTimeString()}</div>
+			<div>Current bid: {this.props.bidAmount}</div>
+
+		</div>;
 	}
 };
