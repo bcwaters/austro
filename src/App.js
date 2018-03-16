@@ -3,6 +3,7 @@ import logo from './logo.png';
 import './App.css';
 import './bootstrap.css';
 import NavComp from './components/NavComp.js';
+import AuctionItem from './components/AuctionItemComp.js'
 
 class App extends Component {
   render() {
@@ -15,6 +16,8 @@ class App extends Component {
         <p className="App-intro">
           AstroAuction is coming
         </p>
+        <div class="AuctionItemList"><AuctionItem name='Sunrise' bidAmount="$50" imgPath="./SunsetPainting.jpg"/></div>
+        <div class="AuctionItemList"><AuctionItem name='Seasons' bidAmount="$35" imgPath="./Seasons.jpg"/></div>
       </div>
     
     );
