@@ -13,9 +13,6 @@ export default class App extends Component {
           <img src={logo} className="App-logo" alt="logo" />
           <div className="App-navbar"> <NavComp /></div>
         </header>
-        <p className="App-intro">
-          AstroAuction is coming
-        </p>
         <div class="AuctionItemList"><AuctionItem name='Sunrise' bidAmount="$50" imgPath="./SunsetPainting.jpg"/></div>
         <div class="AuctionItemList"><AuctionItem name='Seasons' bidAmount="$35" imgPath="./Seasons.jpg"/></div>
       </div>

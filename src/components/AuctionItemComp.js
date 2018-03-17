@@ -27,11 +27,10 @@ export default class AuctionItemComp extends React.Component {
 	render()
 	{
 		return <div class="AuctionItem">
-			<div>Item: <a href="/">{this.props.name}</a></div>
+			<div> <a href="/">{this.props.name}</a></div>
 			<div><img class="AuctionImg" src={this.props.imgPath} alt="paint"/></div>
-			<div>Auction ends at: {this.state.date.toLocaleTimeString()}</div>
-			<div>Current bid: {this.props.bidAmount}</div>
-
+			<div>{this.state.date.toLocaleTimeString()} left</div>
+			<div>{this.props.bidAmount}</div>
 		</div>;
 	}
 };
