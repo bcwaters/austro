@@ -1,36 +1,22 @@
 import React from 'react'
+import { Card, CardImg, CardText, CardBody,
+  CardTitle, CardSubtitle, CardFooter,  Button } from 'reactstrap';
 
 export default class AuctionItemComp extends React.Component {
-	constructor(props){
-		super(props);
-		this.state ={
-			date: new Date(),		
-		};
-	}
-
-  	componentDidMount() {
-  		this.timerID = setInterval(
-      		() => this.tick(),
-      		1000
-    );
-  	}
-
-  	componentWillUnmount() {	
-  		  clearInterval(this.timerID);
-  	}
-
-  	tick() {
-    this.setState({
-      date: new Date()
-    });}
-
+	
 	render()
 	{
-		return <div class="AuctionItem">
-			<div> <a href="/">{this.props.name}</a></div>
-			<div><img class="AuctionImg" src={this.props.imgPath} alt="paint"/></div>
-			<div>{this.state.date.toLocaleTimeString()} left</div>
-			<div>{this.props.bidAmount}</div>
-		</div>;
+		return( 
+		<div class= "AuctionItem">
+      <Card>
+        <CardImg top width="100%" src={this.props.imgPath} alt="{this.props.imgPath}" />
+        <CardBody>
+          <CardTitle className="text-center">{this.props.name}</CardTitle>
+          <CardText>{this.props.description}</CardText>
+          <CardText>$35<Button className="float-right" >Buy</Button></CardText>
+        </CardBody>
+      </Card>
+    	</div>
+    );
 	}
 };

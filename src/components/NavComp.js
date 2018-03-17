@@ -33,7 +33,7 @@ export default class NavComp extends React.Component {
   render() {
     return (
       <div>
-        <Navbar color="white" light expand="md">
+        <Navbar expand="md">
           <NavbarBrand href="/">Astro Auction</NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
