@@ -7,7 +7,7 @@ import {
   Nav,
   NavItem,
   NavLink,
-  UncontrolledDropdown,
+  Dropdown,
   DropdownToggle,
   DropdownMenu,
   DropdownItem } from 'reactstrap';
@@ -26,33 +26,19 @@ export default class NavComp extends React.Component {
       isOpen: !this.state.isOpen
     });
   }
-
-  alertUser(themeSent){return alert('Theme' + themeSent + 'selected');}
-
-
   render() {
     return (
       <div>
         <Navbar expand="md">
-          <NavbarBrand href="/">Astro Auction</NavbarBrand>
-          <NavbarToggler onClick={this.toggle} />
-          <Collapse isOpen={this.state.isOpen} navbar>
-            <Nav className="ml-auto" navbar>
-              <NavItem>
-                <NavLink href="/empty">EmptyLink</NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink href="https://github.com/bcwaters/austro">Github</NavLink>
-              </NavItem>
-              <UncontrolledDropdown nav inNavbar>
-                <DropdownToggle nav caret>
-                  Page Theme
+              <Dropdown nav inNavbar isOpen={this.state.isOpen} toggle={this.toggle} >
+                <DropdownToggle nav caret mr-auto>
+                  Options
                 </DropdownToggle>
                 <DropdownMenu >
-                  <DropdownItem onClick={() =>this.alertUser('1')}>
+                  <DropdownItem onClick="">
                     Theme 1
                   </DropdownItem>
-                  <DropdownItem onClick={() =>this.alertUser('2')}>
+                  <DropdownItem onClick="">
                     Theme 2
                   </DropdownItem>
                   <DropdownItem divider />
@@ -60,9 +46,7 @@ export default class NavComp extends React.Component {
                     Reset
                   </DropdownItem>
                 </DropdownMenu>
-              </UncontrolledDropdown>
-            </Nav>
-          </Collapse>
+              </Dropdown>
         </Navbar>
       </div>
     );

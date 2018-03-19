@@ -1,15 +1,16 @@
 import React from 'react'
-import { CardGroup } from 'reactstrap';
+import { CardDeck } from 'reactstrap';
 
 export default class AuctionItemList extends React.Component {
 	render()
 	{
 		return( 
-		<div class= "AuctionItemList">
-      <CardGroup>
+		<div>
+      <CardDeck>
         {this.props.children}
-      </CardGroup>
-    	</div>
+      </CardDeck>
+      	</div>
+    	
     );
 	}
 };
