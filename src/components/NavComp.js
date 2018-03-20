@@ -1,12 +1,8 @@
 import React from 'react'
 import {
-  Collapse,
-  Navbar,
-  NavbarToggler,
-  NavbarBrand,
   Nav,
-  NavItem,
-  NavLink,
+  Navbar,
+  NavbarBrand,
   Dropdown,
   DropdownToggle,
   DropdownMenu,
@@ -30,23 +26,23 @@ export default class NavComp extends React.Component {
     return (
       <div>
         <Navbar expand="md">
-              <Dropdown nav inNavbar isOpen={this.state.isOpen} toggle={this.toggle} >
-                <DropdownToggle nav caret mr-auto>
-                  Options
+        <NavbarBrand href="/">Astro Auction</NavbarBrand>
+          <Nav className="ml-auto" navbar>
+              <Dropdown nav inNavbar 
+              isOpen={this.state.isOpen} toggle={this.toggle}>
+                <DropdownToggle nav caret>
+                  Sort
                 </DropdownToggle>
-                <DropdownMenu >
-                  <DropdownItem onClick="">
-                    Theme 1
+                <DropdownMenu float="left" position="static">
+                  <DropdownItem onClick={() => alert("hi")}>
+                    Cheapest First
                   </DropdownItem>
-                  <DropdownItem onClick="">
-                    Theme 2
-                  </DropdownItem>
-                  <DropdownItem divider />
-                  <DropdownItem>
-                    Reset
-                  </DropdownItem>
+                  <DropdownItem onClick={() => alert('bye')}>
+                    Most Expensive First
+                  </DropdownItem>  
                 </DropdownMenu>
               </Dropdown>
+              </Nav>
         </Navbar>
       </div>
     );
