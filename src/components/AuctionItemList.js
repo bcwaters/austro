@@ -10,8 +10,6 @@ export default class AuctionItemList extends React.Component {
       <CardDeck>
        {this.props.auctionItems}
       </CardDeck>
-      	</div>
-    	
-    );
+      	</div> );
 	}
 };
