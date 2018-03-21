@@ -7,23 +7,41 @@ import AuctionItem from './components/AuctionItemComp.js';
 import AuctionItemList from './components/AuctionItemList';
 
 export default class App extends Component {
- 
+
+  constructor(props) {
+      super(props);
+      this.state = {
+            auctionItems : this.retrieveAuctionItems()
+          };
+      }
+
+  //Later an array of auctionItems will be retrieved from a database
+  retrieveAuctionItems(){
+    var auctionItems = [
+      <AuctionItem key="1" description="Description of a painting goes here" name='Sunrise' bidAmount="$50" imgPath="./SunsetPainting.jpg"/>,
+      <AuctionItem key="2" name='Seasons' bidAmount="$35" imgPath="./Seasons.jpg"/>]
+      return auctionItems;
+  }
+  
+  sortItems() {
+      const items = this.state.auctionItems.slice();
+      items.reverse();
+    this.setState({
+    auctionItems : items})
+  }
 
   render() {
-
-    var auctionItems = [
-   <AuctionItem key="1" description="Description of a painting goes here" name='Sunrise' bidAmount="$50" imgPath="./SunsetPainting.jpg"/>,
-   <AuctionItem key="2" name='Seasons' bidAmount="$35" imgPath="./Seasons.jpg"/>]
-    
+     var navComp =<NavComp  onClick={() => this.sortItems()}/>
+  
     return (
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
-          <div className="App-navbar"> <NavComp /></div>
-        </header>
-        <AuctionItemList> {auctionItems}  </AuctionItemList>
-      </div>
-    
+          <div className="App-navbar" > {navComp}</div>
+          <AuctionItemList auctionItems={this.state.auctionItems} />
+          {this.state.auctionItems}
+         </header>
+        </div>    
     );
   }
 }

@@ -29,10 +29,11 @@
 
 .card{
   max-width:20%;
-  min-width:15%; 
+  min-width:500px; 
 }
 
 .card-deck{
   height:25%;
-  margin-left: 10px;
+     display: flex;
+   flex-wrap: wrap;
 }

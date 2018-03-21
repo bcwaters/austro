@@ -14,7 +14,7 @@ export default class NavComp extends React.Component {
 
     this.toggle = this.toggle.bind(this);
     this.state = {
-      isOpen: false
+      isOpen: false,
     };
   }
   toggle() {
@@ -22,6 +22,7 @@ export default class NavComp extends React.Component {
       isOpen: !this.state.isOpen
     });
   }
+
   render() {
     return (
       <div>
@@ -33,8 +34,8 @@ export default class NavComp extends React.Component {
                 <DropdownToggle nav caret>
                   Sort
                 </DropdownToggle>
-                <DropdownMenu float="left" position="static">
-                  <DropdownItem onClick={() => alert("hi")}>
+                <DropdownMenu>
+                  <DropdownItem onClick={() => this.props.onClick()}>
                     Cheapest First
                   </DropdownItem>
                   <DropdownItem onClick={() => alert('bye')}>
