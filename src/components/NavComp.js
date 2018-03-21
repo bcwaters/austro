@@ -35,10 +35,10 @@ export default class NavComp extends React.Component {
                   Sort
                 </DropdownToggle>
                 <DropdownMenu>
-                  <DropdownItem onClick={() => this.props.onClick()}>
+                  <DropdownItem onClick={() => this.props.onClick("cheap")}>
                     Cheapest First
                   </DropdownItem>
-                  <DropdownItem onClick={() => alert('bye')}>
+                  <DropdownItem onClick={() => this.props.onClick("expensive")}>
                     Most Expensive First
                   </DropdownItem>  
                 </DropdownMenu>
