@@ -5,6 +5,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 import NavComp from './components/NavComp.js';
 import AuctionItem from './components/AuctionItemComp.js';
 import AuctionItemList from './components/AuctionItemList';
+import ImageSize from 'image-size';
 
 export default class App extends Component {
 
@@ -13,11 +14,15 @@ export default class App extends Component {
       this.sortItems=this.sortItems.bind(this);
       this.state = {
             auctionItems : this.retrieveAuctionItems()
-          };
+          };}
+      getImageRatio(imgDir)
+      {
+        var dimensions = ImageSize(imgDir)
+        return dimensions.width/dimensions.height
       }
-
   //Later an array of auctionItems will be retrieved from a database
   retrieveAuctionItems(){
+
     var auctionItems = [
       // <AuctionItem key="1" description="Description of a painting goes here" name='Sunrise' bidAmount="50" imgPath="./SunsetPainting.jpg"/>,
       // <AuctionItem key="2" name='Seasons' bidAmount="35" imgPath="./Seasons.jpg"/>,
