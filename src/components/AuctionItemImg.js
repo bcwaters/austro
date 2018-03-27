@@ -7,7 +7,7 @@ export default class AuctionItemImg extends React.Component {
     super(props);
     this.state = { 
     	loaded: false,
-    	imageStyle: null };
+    	imageStyle: {height:"50px", width:"50px"} };
     this.handleImageLoaded = this.handleImageLoaded.bind(this);
 }
 
@@ -27,15 +27,11 @@ handleImageLoaded() {
 } 
 
 	setImgStyle(newImg) {
-		console.log(newImg)
-    //card size is 180w x 320h
-    //img height max is .20*320
     var MAX_HEIGHT = 150;
     var MAX_WIDTH = 180;
     var natHeight = newImg.naturalHeight
     var natWidth = newImg.naturalWidth
 	if(natWidth>natHeight){ //horizontal image so fill width
-      	console.log('h' + newImg.height);
       	return {
         boxShadow: "3px 3px 3px 3px grey",
         margin: "5px",
@@ -44,7 +40,6 @@ handleImageLoaded() {
         textAlign: "center"
       };
     }
-      console.log('v width' + newImg.width +" height:" + newImg.height );
       return{ 
         boxShadow: "5px 5px 5px 5px grey",
         margin: "5px",
