@@ -5,11 +5,12 @@ export default class AuctionItemList extends React.Component {
 	
 	render()
 	{
+
 		return( 
-		<div>
-      <CardDeck>
-       {this.props.auctionItems}
-      </CardDeck>
+		<div className = "container">
+      		<div className = "row">
+       		{this.props.auctionItems}
+      		</div>
       	</div> );
 	}
 };

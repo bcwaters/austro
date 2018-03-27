@@ -21,22 +21,29 @@
   font-size: large;
 }
 
-.AuctionImg{
-  max-width:90%;
-  max-height:90%;
-}
-
 .card{
-  min-width:100px;
+  width:200px;
+  height: 300px;
+  margin: 5px;
 }
-
-.card-deck{
-  height:25%;
-    }
 
 .card-text:last-child{
   position:absolute;
   bottom:5px;
-  width:80%;
+  width:100%;
   text-align:left;
+  background: white;
+}
+
+.card-text{
+    white-space: wrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin:0px;
+}
+
+.image-wrap{
+
+  text-align: center;
+  width: 100%;
 }

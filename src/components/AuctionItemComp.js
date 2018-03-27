@@ -1,13 +1,14 @@
 import React from 'react'
-import { Card, CardImg, CardText, CardBody,
-  CardTitle, Button } from 'reactstrap';
+import { Card, CardImg, CardText,
+  Button } from 'reactstrap';
 
 export default class AuctionItemComp extends React.Component {
 
   setImgStyle(imgSrc) {
     //card size is 180w x 320h
     //img height max is .20*320
-    var MAX_HEIGHT = 180;
+    var MAX_HEIGHT = 150;
+     var MAX_WIDTH = 180;
     var newImg = new Image();
     newImg.src = imgSrc; // this must be done AFTER setting onload
     console.log(newImg.height + " " + newImg.width )
@@ -16,10 +17,11 @@ if(newImg.width>newImg.height)
     { //horizontal image so fill width
       console.log('h' + newImg.height);
       return {
-        boxShadow: "5px 10px",
-        height: .2*320,
-        width: "100%",
-        align: "center"
+        boxShadow: "3px 3px 3px 3px grey",
+        margin: "5px",
+        height: (MAX_WIDTH/newImg.width)*newImg.height,
+        width: MAX_WIDTH,
+        textAlign: "center"
       };
     }
       console.log('v' + newImg.width);
@@ -28,22 +30,23 @@ if(newImg.width>newImg.height)
         margin: "5px",
         textAlign: "center",
         height: MAX_HEIGHT,
-        width:(newImg.height/newImg.width)*160,
+        width:(MAX_HEIGHT/newImg.height)*newImg.width,
         };
 }
 	render()
 	{
     var imgStyle= this.setImgStyle(this.props.imgPath)
-		return( 
+    var titleStyle={fontSize: "large"}
+    var descStyle = {fontSize: "small"}
+    return( 
+
       <Card>
-            <div className="imageWrap">
+           <div className="image-wrap">
         <CardImg style={imgStyle} src={this.props.imgPath} alt="{this.props.imgPath}" /></div>
-        <CardBody>
-          <CardTitle className="text-center text-dark">{this.props.name}</CardTitle>
-          <CardText className="text-dark">{this.props.description}</CardText>
-          <br></br>
+            <CardText style={titleStyle} className="text-center text-dark">{this.props.name}</CardText>
+          <CardText style={descStyle}>{this.props.description}</CardText>
           <CardText className="text-dark">${this.props.bidAmount}<Button className="float-right" >Buy</Button></CardText>
-        </CardBody>
+        
       </Card>
     );
 	}
