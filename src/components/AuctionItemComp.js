@@ -15,8 +15,9 @@ export default class AuctionItemComp extends React.Component {
     
 	  console.log(imgSrc )
 	  console.log(newImg)  
-    console.log(newImg.naturalHeight + " " + newImg.natualWidth )
+    console.log(newImg.naturalHeight + " " + newImg.naturalWidth )
 	  }
+    while(!newImg.complete)
 
 if(newImg.width>newImg.height)
     { //horizontal image so fill width
