@@ -7,10 +7,12 @@ export default class AuctionItemComp extends React.Component {
   setImgStyle(imgSrc) {
     //card size is 180w x 320h
     //img height max is .20*320
+	  newImg.src = imgSrc; // this must be done AFTER setting onload
+	  newImg.onload=function(){
     var MAX_HEIGHT = 150;
      var MAX_WIDTH = 180;
     var newImg = new Image();
-    newImg.src = imgSrc; // this must be done AFTER setting onload
+    
 	console.log(imgSrc )
 	  console.log(newImg)
 	  
@@ -35,6 +37,7 @@ if(newImg.width>newImg.height)
         height: MAX_HEIGHT,
         width:(MAX_HEIGHT/newImg.height)*newImg.width,
         };
+	  }
 }
 	render()
 	{
