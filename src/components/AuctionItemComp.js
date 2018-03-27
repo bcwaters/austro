@@ -11,6 +11,9 @@ export default class AuctionItemComp extends React.Component {
      var MAX_WIDTH = 180;
     var newImg = new Image();
     newImg.src = imgSrc; // this must be done AFTER setting onload
+	console.log(imgSrc )
+	  console.log(newImg)
+	  
     console.log(newImg.height + " " + newImg.width )
 
 if(newImg.width>newImg.height)
