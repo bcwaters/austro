@@ -10,17 +10,20 @@ export default class AuctionItemComp extends React.Component {
     var MAX_HEIGHT = 150;
     var MAX_WIDTH = 180;
     var newImg = new Image();
-	  
+	  newImg.src = imgSrc; // this must be done AFTER setting onload
 	  newImg.onload=function(){
     
-	  console.log(imgSrc )
-	  console.log(newImg)  
-    console.log(newImg.naturalHeight + " " + newImg.naturalWidth )
 	  }
-    newImg.src = imgSrc; // this must be done AFTER setting onload
-    while(!newImg.complete)
 
-if(newImg.width>newImg.height)
+    //temp fix for sync issues on server
+    while(!newImg.complete)
+    {}
+    var widthInt = newImg.width;
+    var heightInt = newImg.height;
+    //end temp fix
+
+    
+if(widthInt>heightInt)
     { //horizontal image so fill width
       console.log('h' + newImg.height);
       return {
@@ -31,7 +34,7 @@ if(newImg.width>newImg.height)
         textAlign: "center"
       };
     }
-      console.log('v' + newImg.width);
+      console.log('v width' + newImg.width +" height:" + newImg.height );
       return{ 
         boxShadow: "5px 5px 5px 5px grey",
         margin: "5px",
