@@ -36,6 +36,7 @@
   text-align:left;
   vertical-align: middle;
   background: #FFE1AD;
+  font-size: large;
 }
 
 .card-text{
@@ -43,6 +44,10 @@
     overflow: hidden;
     text-overflow: ellipsis;
     margin:0px;
+    background-color: #FFE1AD;
+    font-size: small;
+    text-align: left;
+
 }
 
 .image-wrap{
